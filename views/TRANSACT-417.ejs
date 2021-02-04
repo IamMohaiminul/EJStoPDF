@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+
+    <title>Bank Purposes Authorisation Letter</title>
+
+    <style>
+      p {
+        text-align: justify;
+        text-justify: inter-word;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-10">
+          <div class="row">
+            <div class="col" style="margin-top: 125px">
+              <h5>
+                <strong>
+                  <u>LETTER OF AUTHORISATION FOR BANK PURPOSES</u>
+                </strong>
+              </h5>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 50px">
+            <div class="col">
+              <p>DATE: <%= appointmentDate %></p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col-1">
+              <p>TO:</p>
+            </div>
+            <div class="col-6">
+              <hr style="border-top: 1px solid black; margin-top: 25px" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <hr style="border-top: 1px solid black" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <hr style="border-top: 1px solid black" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <hr style="border-top: 1px solid black" />
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 75px">
+            <div class="col">
+              <p>DEAR SIR / MADAM,</p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col">
+              <p>
+                <strong>
+                  <u>AUTHORISATION LETTER FOR VEHICLE</u>
+                </strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col">
+              <p>
+                With reference to above matter, for vehicle with registration
+                number &emsp; <u><%= licensePlate %></u> ,
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col">
+              <p>I the undersigned, hereby authorise</p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col-1"></div>
+            <div class="col">
+              <p>NAME: &emsp; <u><%= oePicName %></u></p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col-1"></div>
+            <div class="col">
+              <p>I/C NO: &emsp; <u><%= oePicIdNo %></u></p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col">
+              <p>
+                to act on my behalf in all manner relating to Bank Settlement,
+                AP Form and Import Form, Registration Card and Release Letter.
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 75px">
+            <div class="col">
+              <p>Thank You and Best Regards.</p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col">
+              <p>Sincerely,</p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 75px">
+            <div class="col">
+              <hr style="border-top: 1px solid black" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <p>Name: <%= ownerName %></p>
+              <p>I/C no: <%= ownerIdNo %></p>
+              <p>Contact No: <%= ownerPhoneNo %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
