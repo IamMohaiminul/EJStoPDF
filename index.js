@@ -8,6 +8,7 @@ const FILE_NAME = "TRANSACT-413";
 
 // here define all the variables
 const DATA = {
+  bopNo: "01234567890",
   appointmentDate: "2021-02-04",
   licensePlate: "ABC123",
   oePicName: "Mohaiminul OE",
