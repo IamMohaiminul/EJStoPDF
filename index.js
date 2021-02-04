@@ -4,10 +4,18 @@ let puppeteer = require("puppeteer");
 
 let app = express();
 app.set("view engine", "ejs");
-const FILE_NAME = "sample";
+const FILE_NAME = "TRANSACT-413";
 
 // here define all the variables
-const DATA = {};
+const DATA = {
+  appointmentDate: "2021-02-04",
+  licensePlate: "ABC123",
+  oePicName: "Mohaiminul OE",
+  oePicIdNo: "328089",
+  ownerName: "Muhd Mohaiminul Islam",
+  ownerIdNo: "881122-33-4455",
+  ownerPhoneNo: "01100000000",
+};
 
 // render the ejs template
 app.get("/", function (req, res) {
