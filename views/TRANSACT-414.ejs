@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+
+    <title>Redemption Letter</title>
+
+    <style>
+      p {
+        text-align: justify;
+        text-justify: inter-word;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-10">
+          <div class="row">
+            <div class="col" style="margin-top: 100px">
+              <table class="table table-sm table-borderless">
+                <tr>
+                  <td style="width: 15%">Your ref. no.</td>
+                  <td style="width: 5%">:</td>
+                  <td><%= bopNo %></td>
+                </tr>
+                <tr>
+                  <td style="width: 15%">Our ref. no.</td>
+                  <td style="width: 5%">:</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td style="width: 15%">Date</td>
+                  <td style="width: 5%">:</td>
+                  <td><%= appointmentDate %></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col">
+              <p>
+                <strong>CARSOME SDN BHD</strong>
+                <br />
+                Level 9, KYM Tower, No 8, Jalan PJU 7/6,
+                <br />
+                Mutiara Damansara, 47800 Petaling Jaya,
+                <br />
+                Selangor.
+                <br />
+                <strong>Attn.: <%= oePicName %></strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col">
+              <p>Dear Sir/Madam,</p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col">
+              <p>
+                <strong>LETTER OF CONFIRMATION</strong>
+                <br />
+                <strong> - &emsp; OUTSTANDING PAYMENT / REDEMPTION </strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <hr style="border-top: 1px solid black" />
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col">
+              <p>I/We refer to the above matter.</p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col">
+              <p>
+                2. &emsp; Please be informed that the outstanding payment /
+                redemption amount for the Vehicle is as follows:
+              </p>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-11">
+              <table class="table table-sm table-bordered">
+                <tr>
+                  <td style="width: 25%">Vehicle</td>
+                  <td style="width: 5%">&ensp;:&ensp;</td>
+                  <td><%= licensePlate %></td>
+                </tr>
+                <tr>
+                  <td style="width: 25%">Registered Owner</td>
+                  <td style="width: 5%">&ensp;:&ensp;</td>
+                  <td><%= ownerName %> & <%= ownerIdNo %></td>
+                </tr>
+                <tr>
+                  <td style="width: 25%">Bank / Financier</td>
+                  <td style="width: 5%">&ensp;:&ensp;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td style="width: 25%">
+                    Redemption amount / Loan Settlement Sum
+                  </td>
+                  <td style="width: 5%">&ensp;:&ensp;</td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col">
+              <p>
+                3. &emsp; I/We undertake that in the event that the
+                aforementioned Redemption amount / Loan Settlement Sum is less
+                than the actual Redemption amount / Loan Settlement Sum, we
+                agree and undertake to top-up the differential sum between the
+                aforementioned Redemption amount / Loan Settlement Sum and the
+                actual Redemption amount / Loan Settlement Sum (“Differential
+                Sum”) within three (3) days of being notified by Carsome.
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col">
+              <p>
+                4. &emsp; I/We agree that Carsome shall have the right to impose
+                the late payment charges on the total outstanding at the rate of
+                eighteen per centum (18%) per annum calculated on daily basis
+                until the date of the full settlement.
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col">
+              <p>Your sincerely,</p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col">
+              <p>
+                For and on behalf of
+                <br />
+                <strong><%= ownerName %></strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 25px">
+            <div class="col-6">
+              <hr style="border: 1px dashed black" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <p>
+                <strong>Name: <%= ownerName %></strong>
+                <br />
+                <strong>NRIC no.: <%= ownerIdNo %></strong>
+                <br />
+                <strong>Company stamp:</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
