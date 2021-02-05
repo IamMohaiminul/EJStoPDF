@@ -23,6 +23,9 @@
         text-align: justify;
         text-justify: inter-word;
       }
+      .table-bordered td {
+        border: 1px solid black !important;
+      }
     </style>
   </head>
   <body>
@@ -33,19 +36,26 @@
             <div class="col" style="margin-top: 125px">
               <table class="table table-sm table-borderless">
                 <tr>
-                  <td style="width: 15%">Your ref. no.</td>
-                  <td style="width: 5%">:</td>
-                  <td><%= bopNo %></td>
-                </tr>
-                <tr>
-                  <td style="width: 15%">Our ref. no.</td>
-                  <td style="width: 5%">:</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td style="width: 15%">Date</td>
-                  <td style="width: 5%">:</td>
-                  <td><%= appointmentDate %></td>
+                  <td style="width: 15%">
+                    Your ref. no.
+                    <br />
+                    Our ref. no.
+                    <br />
+                    Date
+                  </td>
+                  <td style="width: 5%">
+                    :
+                    <br />
+                    :
+                    <br />
+                    :
+                  </td>
+                  <td>
+                    <%= bopNo %>
+                    <br />
+                    <br />
+                    <%= appointmentDate %>
+                  </td>
                 </tr>
               </table>
             </div>
@@ -62,7 +72,7 @@
                 <br />
                 Selangor.
                 <br />
-                <strong>Attn.: <%= oePicName %></strong>
+                <u><strong>Attn.: </strong><%= oePicName %></u>
               </p>
             </div>
           </div>
@@ -180,18 +190,18 @@
             </div>
           </div>
 
-          <div class="row" style="margin-top: 5px">
+          <div class="row" style="margin-top: 25px">
             <div class="col-6">
               <hr style="border: 1px dashed black" />
             </div>
           </div>
 
-          <div class="row">
+          <div class="row" style="margin-bottom: 75px">
             <div class="col">
               <p>
-                <strong>Name: <%= ownerName %></strong>
+                <strong>Name: </strong><%= ownerName %>
                 <br />
-                <strong>NRIC no.: <%= ownerIdNo %></strong>
+                <strong>NRIC no.: </strong><%= ownerIdNo %>
                 <br />
                 <strong>Company stamp:</strong>
               </p>
