@@ -8,14 +8,35 @@ const FILE_NAME = "TRANSACT-413";
 
 // here define all the variables
 const DATA = {
-  bopNo: "01234567890",
-  appointmentDate: "2021-02-04",
-  licensePlate: "ABC123",
-  oePicName: "Mohaiminul OE",
-  oePicIdNo: "328089",
-  ownerName: "Muhd Mohaiminul Islam",
-  ownerIdNo: "881122-33-4455",
-  ownerPhoneNo: "01100000000",
+  bopNo: "202102/0006",
+  appointmentDate: "01/01/2021",
+  inspectionDate: "01/01/2021",
+  purchasePrice: "10000",
+  handlingFee: "200",
+  owner: {
+    name: "Owner Name",
+    ic: "940101102345",
+    address: "Jalan Hulubalang 37A, Taman Millennium Sentosa, Klang",
+    phoneNo: "0120101010",
+    email: "testing@test.com",
+    position: "", // empty string
+  },
+  oePic: {
+    name: "Operation Executive",
+    ic: "", // empty string
+    email: "oepic@carsome.com",
+    position: "", // empty string,
+  },
+  car: {
+    details: "Bufori MK II No Variant",
+    year: "1994",
+    engine: "1.8",
+    transmission: "Auto",
+    colour: "Silver",
+    engineNo: "12345",
+    chassisNo: "12345",
+    licensePlate: "WWW 1000",
+  },
 };
 
 // render the ejs template
