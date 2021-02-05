@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+
+    <title>3rd Party Authorisation Letter</title>
+
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+      }
+      p {
+        text-align: justify;
+        text-justify: inter-word;
+      }
+      .table-bordered td {
+        border: 1px solid black !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-10">
+          <div class="row">
+            <div class="col" style="margin-top: 125px">
+              <table class="table table-sm table-borderless">
+                <tr>
+                  <td style="width: 15%">
+                    Your ref. no.
+                    <br />
+                    Our ref. no.
+                    <br />
+                    Date
+                  </td>
+                  <td style="width: 5%">
+                    :
+                    <br />
+                    :
+                    <br />
+                    :
+                  </td>
+                  <td>
+                    <%= bopNo %>
+                    <br />
+                    <br />
+                    <%= appointmentDate %>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 5px">
+            <div class="col">
+              <p>
+                <strong>CARSOME SDN BHD</strong>
+                <br />
+                Level 9, KYM Tower, No 8, Jalan PJU 7/6,
+                <br />
+                Mutiara Damansara, 47800 Petaling Jaya,
+                <br />
+                Selangor.
+                <br />
+                <u><strong>Attn.: </strong><%= oePic.name %></u>
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 5px">
+            <div class="col">
+              <p>Dear Sir/Madam,</p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 5px">
+            <div class="col">
+              <p>
+                <strong>
+                  <u>
+                    LETTER OF AUTHORISATION TO DISBURSE/TRANSFER PAYMENT TO
+                    NOMINATED THIRD PARTY’S BANK ACCOUNT
+                  </u>
+                </strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 5px">
+            <div class="col">
+              <p>I refer to the above matter.</p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 5px">
+            <div class="col">
+              <p>
+                2. &emsp; I, <strong><%= owner.name %></strong> (NRIC no.: <%=
+                owner.ic %>), would like to sell the vehicle (“Vehicle”) listed
+                in Appendix 1 of this letter (“List of Vehicle(s)”) to CARSOME
+                SDN BHD (Co. reg. no.: 1101954-M)(“Carsome”).
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 5px">
+            <div class="col">
+              <p>
+                3. &emsp; In the event any of the Vehicle listed in the List of
+                Vehicle(s) is being purchased by Carsome (“Transaction”), I
+                hereby instruct Carsome to transfer any proceeds from the
+                Transaction, after deducting all the relevant costs and expenses
+                (“Proceeds”) to the nominated beneficiary indicated below
+                (“Nominated Beneficiary”), either by cheque, online banking
+                transfer or any mode of transfer deemed fit by Carsome (“Third
+                Party Transfer”):
+              </p>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-11">
+              <table class="table table-sm table-bordered">
+                <tr>
+                  <td style="width: 25%">
+                    <strong>Nominated Beneficiary</strong>
+                  </td>
+                  <td style="width: 5%">&ensp;:&ensp;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td style="width: 25%">
+                    <strong>Co. reg. no. / NRIC no.</strong>
+                  </td>
+                  <td style="width: 5%">&ensp;:&ensp;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td style="width: 25%">
+                    <strong>Bank Account no.</strong>
+                  </td>
+                  <td style="width: 5%">&ensp;:&ensp;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td style="width: 25%">
+                    <strong>Bank</strong>
+                  </td>
+                  <td style="width: 5%">&ensp;:&ensp;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td style="width: 25%">
+                    <strong>Swift Code</strong>
+                  </td>
+                  <td style="width: 5%">&ensp;:&ensp;</td>
+                  <td></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 5px">
+            <div class="col">
+              <p>
+                4. &emsp; I confirm that I have the required authority to
+                instruct the Third Party Transfer in Paragraph 3 of this letter
+                (“Instruction”) and the Instruction shall replace and supersede
+                (a) the payment term in the Sale and Purchase Agreement (to the
+                extent of inconsistency) and/or (b) any prior instruction given
+                to Carsome in relation to the vehicle listed in the List of
+                Vehicle(s).
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 5px">
+            <div class="col">
+              <p>
+                5. &emsp; I understand the arrangement and the veracity of the
+                details listed in Paragraph 3 of this letter and agree that
+                Carsome shall proceed with the Third Party Transfer, subject to
+                the fulfilment of all the conditions precedent to complete the
+                Transaction in the contract between the parties (“Sale and
+                Purchase Agreement”) and to the extent permitted by law.
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 5px">
+            <div class="col">
+              <p>
+                6. &emsp; I agree that Carsome has the absolute right to
+                terminate my Instruction without any liability by providing me a
+                prior notice.
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 5px">
+            <div class="col">
+              <p>
+                7. &emsp; In consideration of Carsome effecting the Third Party
+                Transfer, I shall:
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 5px">
+            <div class="col">
+              <p>
+                &emsp; &emsp; (a) &emsp; deliver the possession of the vehicle
+                (and all the required documents) under the Transaction to
+                Carsome according to the terms of the Sale and Purchase
+                Agreement; and
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 125px; page-break-before: always">
+            <div class="col">
+              <p>
+                &emsp; &emsp; (b) &emsp; undertake to defend, indemnify, and
+                hold harmless Carsome from and against any claim, action,
+                liability, loss, damage, liabilities (whether criminal or
+                civil), cost and expenses, including, without limitation, legal
+                fees that Carsome may suffer, or howsoever incur, arising from
+                or in connection with my Instruction and/or the Third Party
+                Transfer.
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 5px">
+            <div class="col">
+              <p>
+                8. &emsp; I agree that Carsome may assign, transfer, novate and
+                can otherwise deal in any manner with all or any part of its
+                rights, remedies, power, duties and obligations in relation to
+                the Instruction to any person without my consent. The
+                Instruction shall be binding upon and enure for the benefit of
+                Carsome and my successors in title.
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 5px">
+            <div class="col">
+              <p>
+                9. &emsp; The Instruction shall be in effect from the date
+                Carsome acknowledged and accepted the terms of this letter and
+                it shall remain in effect until (i) Carsome receives a written
+                notice from me to terminate the Instruction (subject to the
+                effective date of such termination in the said written notice,
+                if any) or (ii) the effective date of the termination of my
+                Instruction by Carsome, whichever occurs earlier.
+              </p>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 5px">
+            <div class="col-7">
+              <p>Your sincerely,</p>
+              <div class="row" style="margin-top: 50px">
+                <div class="col-6">
+                  <hr style="border: 1px dashed black" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <p>
+                    <strong>Name: </strong><%= owner.name %>
+                    <br />
+                    <strong>NRIC no.: </strong><%= owner.ic %>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-5 border border-dark">
+              <div class="row" style="margin-top: 50px">
+                <div class="col">
+                  <p class="text-center">
+                    <strong><u>ACKNOWLEDGEMENT AND ACCEPTANCE</u></strong>
+                  </p>
+                </div>
+              </div>
+
+              <div class="row" style="margin-top: 5px">
+                <div class="col">
+                  <p>
+                    For and on behalf of
+                    <br />
+                    <strong>CARSOME SDN BHD (201401025864)</strong>
+                  </p>
+                </div>
+              </div>
+              <div class="row" style="margin-top: 50px">
+                <div class="col-8">
+                  <hr style="border: 1px dashed black" />
+                </div>
+              </div>
+              <div class="row" style="margin-bottom: 75px">
+                <div class="col">
+                  <p>
+                    <strong>Name: </strong><%= oePic.name %>
+                    <br />
+                    <strong>NRIC no.: </strong><%= oePic.ic %>
+                    <br />
+                    <strong>Position: </strong><%= oePic.position %>
+                    <br />
+                    <strong>Date: </strong><%= appointmentDate %>
+                    <br />
+                    <strong>Company stamp:</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 125px; page-break-before: always">
+            <div class="col">
+              <p class="text-center">
+                <strong>APPENDIX 1</strong>
+                <br />
+                <strong>List of Vehicle(s)</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col">
+              <table class="table table-sm table-bordered text-center">
+                <tr class="font-weight-bold">
+                  <td style="width: 5%">NO.</td>
+                  <td style="width: 15%">YEAR<br />MAKE</td>
+                  <td style="width: 40%">MODEL</td>
+                  <td style="width: 20%">CAR PLATE<br />no.</td>
+                  <td style="width: 20%">CHASSIS<br />no.</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td><%= car.year %></td>
+                  <td><%= car.details %></td>
+                  <td><%= car.licensePlate %></td>
+                  <td><%= car.chassisNo %></td>
+                </tr>
+                <% for(var i=2; i <= 25; i++) { %>
+                <tr>
+                  <td>
+                    <span class="invisible"><%= i %></span>
+                  </td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <% } %>
+              </table>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <p class="text-center">
+                <strong
+                  >**************************************************</strong
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
