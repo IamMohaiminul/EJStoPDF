@@ -19,6 +19,9 @@
     <title>Bank Purposes Authorisation Letter</title>
 
     <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+      }
       p {
         text-align: justify;
         text-justify: inter-word;
@@ -89,7 +92,7 @@
             <div class="col">
               <p>
                 With reference to above matter, for vehicle with registration
-                number &emsp; <u><%= licensePlate %></u> ,
+                number &emsp; <u><%= car.licensePlate %></u> ,
               </p>
             </div>
           </div>
@@ -103,14 +106,14 @@
           <div class="row" style="margin-top: 25px">
             <div class="col-1"></div>
             <div class="col">
-              <p>NAME: &emsp; <u><%= oePicName %></u></p>
+              <p>NAME: &emsp; <u><%= oePic.name %></u></p>
             </div>
           </div>
 
           <div class="row" style="margin-top: 25px">
             <div class="col-1"></div>
             <div class="col">
-              <p>I/C NO: &emsp; <u><%= oePicIdNo %></u></p>
+              <p>I/C NO: &emsp; <u><%= oePic.ic %></u></p>
             </div>
           </div>
 
@@ -143,9 +146,9 @@
 
           <div class="row">
             <div class="col">
-              <p>Name: <%= ownerName %></p>
-              <p>I/C no: <%= ownerIdNo %></p>
-              <p>Contact No: <%= ownerPhoneNo %></p>
+              <p>Name: <%= owner.name %></p>
+              <p>I/C no: <%= owner.ic %></p>
+              <p>Contact No: <%= owner.phoneNo %></p>
             </div>
           </div>
         </div>

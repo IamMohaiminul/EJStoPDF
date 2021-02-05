@@ -19,6 +19,9 @@
     <title>Redemption Letter</title>
 
     <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+      }
       p {
         text-align: justify;
         text-justify: inter-word;
@@ -72,7 +75,7 @@
                 <br />
                 Selangor.
                 <br />
-                <u><strong>Attn.: </strong><%= oePicName %></u>
+                <u><strong>Attn.: </strong><%= oePic.name %></u>
               </p>
             </div>
           </div>
@@ -122,14 +125,14 @@
                     <strong>Vehicle</strong>
                   </td>
                   <td style="width: 5%">&ensp;:&ensp;</td>
-                  <td><%= licensePlate %></td>
+                  <td><%= car.licensePlate %></td>
                 </tr>
                 <tr>
                   <td style="width: 25%">
                     <strong>Registered Owner</strong>
                   </td>
                   <td style="width: 5%">&ensp;:&ensp;</td>
-                  <td><%= ownerName %> & <%= ownerIdNo %></td>
+                  <td><%= owner.name %> & <%= owner.ic %></td>
                 </tr>
                 <tr>
                   <td style="width: 25%">
@@ -185,7 +188,7 @@
               <p>
                 For and on behalf of
                 <br />
-                <strong><%= ownerName %></strong>
+                <strong><%= owner.name %></strong>
               </p>
             </div>
           </div>
@@ -199,9 +202,9 @@
           <div class="row" style="margin-bottom: 75px">
             <div class="col">
               <p>
-                <strong>Name: </strong><%= ownerName %>
+                <strong>Name: </strong><%= owner.name %>
                 <br />
-                <strong>NRIC no.: </strong><%= ownerIdNo %>
+                <strong>NRIC no.: </strong><%= owner.ic %>
                 <br />
                 <strong>Company stamp:</strong>
               </p>
