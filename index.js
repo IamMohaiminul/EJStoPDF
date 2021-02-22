@@ -4,15 +4,19 @@ let puppeteer = require("puppeteer");
 
 let app = express();
 app.set("view engine", "ejs");
-const FILE_NAME = "TRANSACT-413";
+const FILE_NAME = "TRANSACT-417";
 
 // here define all the variables
 const DATA = {
   bopNo: "202102/0006",
+  inspectionId: "12345",
   appointmentDate: "01/01/2021",
   inspectionDate: "01/01/2021",
   purchasePrice: "10000",
+  bidPrice: "15000",
   handlingFee: "200",
+  commission: "1000",
+  qrCode: "512048_ODO-CR",
   owner: {
     name: "Owner Name",
     ic: "940101102345",
@@ -36,6 +40,19 @@ const DATA = {
     engineNo: "12345",
     chassisNo: "12345",
     licensePlate: "WWW 1000",
+  },
+  sa: {
+    name: "SA Name",
+    ic: "901010101234",
+    phoneNo: "0121010101",
+    email: "SAemail@testing.com",
+    dealership: {
+      name: "Dealer Ship Name",
+      address: "Jalan Hulubalang 37A, Taman Millennium Sentosa, Klang",
+    },
+    bankName: "Maybank Sdn Bhd",
+    beneficiaryName: "SA Name",
+    accountNo: "A0213123",
   },
 };
 
