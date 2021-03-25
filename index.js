@@ -56,26 +56,32 @@ const DATA = {
   },
   dealer: {
     name: "Dealer Name",
-    ic: "881122334455",
+    id: "881122334455",
   },
   issueDate: "25/03/2021",
-  receiptNo: "20210325",
-  marketPlace: "",
-  cars: [
+  docId: "20210325",
+  bidding: {
+    type: "Open",
+  },
+  payments: [
     {
-      licensePlate: "WWW1243",
+      car: {
+        licensePlate: "WWW1243",
+        details: "2012 Audi A1 TFSI 1.4 Auto",
+      },
       inspectionId: "590105",
-      details: "2012 Audi A1 TFSI 1.4 Auto",
-      paymentAmount: "80100",
+      amount: "80100",
     },
     {
-      licensePlate: "UIU12345",
+      car: {
+        licensePlate: "UIU12345",
+        details: "2018 Honda ACCORD VTI-L ADVANCE 2.4 Auto",
+      },
       inspectionId: "589607",
-      details: "2018 Honda ACCORD VTI-L ADVANCE 2.4 Auto",
-      paymentAmount: "30100",
+      amount: "30100",
     },
   ],
-  grandTotal: "110200",
+  amount: "110200",
 };
 
 // render the ejs template

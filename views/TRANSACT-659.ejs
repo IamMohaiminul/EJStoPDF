@@ -104,7 +104,7 @@
             <div class="row">
               <div class="col-sm-5">Dealer ID</div>
               <span class="colon">:</span>
-              <div class="col-sm-6"><%= dealer.ic %></div>
+              <div class="col-sm-6"><%= dealer.id %></div>
             </div>
           </div>
           <div class="col-sm-6">
@@ -125,14 +125,14 @@
             <div class="row">
               <div class="col-sm-5">Receipt No.</div>
               <span class="colon">:</span>
-              <div class="col-sm-6"><%= receiptNo %></div>
+              <div class="col-sm-6"><%= docId %></div>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="row">
               <div class="col-sm-5">Marketplace</div>
               <span class="colon">:</span>
-              <div class="col-sm-6"><%= marketPlace %></div>
+              <div class="col-sm-6"><%= bidding.type %></div>
             </div>
           </div>
         </div>
@@ -157,15 +157,15 @@
           </td>
         </tr>
 
-        <% cars.forEach(function(car, idx){ %>
+        <% payments.forEach(function(item, idx){ %>
         <tr>
           <td style="text-align: center"><%= idx + 1 %></td>
-          <td style="text-align: center"><%= car.licensePlate %></td>
-          <td style="text-align: center"><%= car.inspectionId %></td>
-          <td style="text-align: center"><%= car.details %></td>
+          <td style="text-align: center"><%= item.car.licensePlate %></td>
+          <td style="text-align: center"><%= item.inspectionId %></td>
+          <td style="text-align: center"><%= item.car.details %></td>
           <td style="text-align: right">
             <%= new Intl.NumberFormat('en-MY', { style: 'currency', currency:
-            'MYR' }).format(car.paymentAmount) %>
+            'MYR' }).format(item.amount) %>
           </td>
         </tr>
         <%});%>
@@ -178,14 +178,14 @@
             <strong>
               Grand Total
               <span style="font-size: 15px">
-                <%= cars.length %> vehicle(s)
+                <%= payments.length %> vehicle(s)
               </span>
             </strong>
           </td>
           <td style="text-align: right">
             <strong>
               <%= new Intl.NumberFormat('en-MY', { style: 'currency', currency:
-              'MYR' }).format(grandTotal) %>
+              'MYR' }).format(amount) %>
             </strong>
           </td>
         </tr>
