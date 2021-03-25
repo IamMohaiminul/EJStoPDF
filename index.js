@@ -4,7 +4,7 @@ let puppeteer = require("puppeteer");
 
 let app = express();
 app.set("view engine", "ejs");
-const FILE_NAME = "TRANSACT-417";
+const FILE_NAME = "TRANSACT-659";
 
 // here define all the variables
 const DATA = {
@@ -54,6 +54,28 @@ const DATA = {
     beneficiaryName: "SA Name",
     accountNo: "A0213123",
   },
+  dealer: {
+    name: "Dealer Name",
+    ic: "881122334455",
+  },
+  issueDate: "25/03/2021",
+  receiptNo: "20210325",
+  marketPlace: "",
+  cars: [
+    {
+      licensePlate: "WWW1243",
+      inspectionId: "590105",
+      details: "2012 Audi A1 TFSI 1.4 Auto",
+      paymentAmount: "80100",
+    },
+    {
+      licensePlate: "UIU12345",
+      inspectionId: "589607",
+      details: "2018 Honda ACCORD VTI-L ADVANCE 2.4 Auto",
+      paymentAmount: "30100",
+    },
+  ],
+  grandTotal: "110200",
 };
 
 // render the ejs template

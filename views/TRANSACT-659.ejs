@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      @media print {
+        body {
+          font-family: Helvetica, sans-serif;
+        }
+      }
+
+      @media screen {
+        .yes-print {
+          display: none;
+        }
+      }
+
+      body {
+        font-family: Helvetica, sans-serif;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #ebebeb;
+        border-collapse: collapse;
+        padding: 8px 14px;
+      }
+
+      .container.bop-wrapper {
+        background-color: white;
+        margin: 45px auto;
+        font-size: 16px;
+        min-height: 100vh;
+      }
+
+      .title_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .title_wrapper > .logo {
+        height: 47px;
+      }
+
+      .title_wrapper > .title {
+        font-weight: 700;
+        font-size: 33px;
+      }
+
+      .carsome {
+        font-size: 16px;
+      }
+
+      .row * .header {
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+
+      .colon {
+        font-weight: 700;
+      }
+
+      .footer {
+        position: absolute;
+        bottom: 0;
+        width: 85%;
+        height: 7.5rem;
+        font-size: 14px;
+        border-top: solid 2px black;
+        padding: 16px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container bop-wrapper">
+      <div class="title_wrapper">
+        <img
+          class="logo"
+          src="https://d3l1ba62brinpo.cloudfront.net/website/content/MY/logo-carsome.svg"
+          alt="Carsome"
+        />
+        <span class="title">Official Receipt</span>
+      </div>
+      <span class="carsome">Carsome Sdn Bhd (201401025864)</span>
+
+      <div
+        class="table"
+        style="
+          border-top: solid black 2px;
+          border-bottom: solid black 2px;
+          margin-top: 32px;
+          padding: 16px 0;
+        "
+      >
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-sm-5">Dealer ID</div>
+              <span class="colon">:</span>
+              <div class="col-sm-6"><%= dealer.ic %></div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-sm-5">Issue Date</div>
+              <span class="colon">:</span>
+              <div class="col-sm-6"><%= issueDate %></div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-sm-5">Dealer Name</div>
+              <span class="colon">:</span>
+              <div class="col-sm-6"><%= dealer.name %></div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-sm-5">Receipt No.</div>
+              <span class="colon">:</span>
+              <div class="col-sm-6"><%= receiptNo %></div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-sm-5">Marketplace</div>
+              <span class="colon">:</span>
+              <div class="col-sm-6"><%= marketPlace %></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <table style="width: 100%; margin-top: 32px">
+        <tr>
+          <td style="width: 5%; text-align: center">
+            <strong>Item</strong>
+          </td>
+          <td style="width: 15%; text-align: center">
+            <strong>Registration No.</strong>
+          </td>
+          <td style="width: 15%; text-align: center">
+            <strong>Inspection ID</strong>
+          </td>
+          <td style="width: 45%; text-align: center">
+            <strong>Car Details</strong>
+          </td>
+          <td style="width: 20%; text-align: right">
+            <strong>Amount Paid (MY)</strong>
+          </td>
+        </tr>
+
+        <% cars.forEach(function(car, idx){ %>
+        <tr>
+          <td style="text-align: center"><%= idx + 1 %></td>
+          <td style="text-align: center"><%= car.licensePlate %></td>
+          <td style="text-align: center"><%= car.inspectionId %></td>
+          <td style="text-align: center"><%= car.details %></td>
+          <td style="text-align: right">
+            <%= new Intl.NumberFormat('en-MY', { style: 'currency', currency:
+            'MYR' }).format(car.paymentAmount) %>
+          </td>
+        </tr>
+        <%});%>
+
+        <tr>
+          <td style="border-color: white"></td>
+          <td style="border-color: white"></td>
+          <td style="border-bottom-color: white"></td>
+          <td>
+            <strong>
+              Grand Total
+              <span style="font-size: 15px">
+                <%= cars.length %> vehicle(s)
+              </span>
+            </strong>
+          </td>
+          <td style="text-align: right">
+            <strong>
+              <%= new Intl.NumberFormat('en-MY', { style: 'currency', currency:
+              'MYR' }).format(grandTotal) %>
+            </strong>
+          </td>
+        </tr>
+      </table>
+
+      <div class="footer">
+        <span>
+          CARSOME SDN BHD | Level 9, KYM Tower, Jalan PJU 7/6, Mutiara
+          Damansara, 47800, Petaling Jaya, Selangor, Malaysia.
+        </span>
+        <div class="row">
+          <div class="col-sm-2">T: +603-7887 1069</div>
+          <div class="col-sm-2">F: +603-74980066</div>
+          <div class="col-sm-2">E: info@carsome.my</div>
+          <div class="col-sm-2">W: carsome.my</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
